@@ -18,8 +18,14 @@ public class PrinterTest {
     }
 
     @Test
-    public void canMakeCopiesFor3Pages4Copies() {
+    public void canMakeCopiesFor3Pages4CopiesHasEnoughSheets() {
         printer.photocopy(3,4);
         assertEquals(88, printer.getSheets());
+    }
+
+    @Test
+    public void cantMakeCopiesFor10pages20copiesNotEnoughSheets() {
+        printer.photocopy(10, 20);
+        assertEquals(100, printer.getSheets());
     }
 }

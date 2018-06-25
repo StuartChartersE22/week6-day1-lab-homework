@@ -12,6 +12,8 @@ public class Printer {
 
     public void photocopy(int pages, int copies) {
         int numberOfSheetsUsed = pages * copies;
-        this.sheets -= numberOfSheetsUsed;
+        if(numberOfSheetsUsed < this.sheets){
+            this.sheets -= numberOfSheetsUsed;
+        }
     }
 }
