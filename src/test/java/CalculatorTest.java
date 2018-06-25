@@ -19,6 +19,9 @@ public class CalculatorTest {
         assertEquals(21, Calculator.multiply(3,7));
     }
 
-
+    @Test
+    public void canDivide8and2() {
+        assertEquals(4.0, Calculator.divide(8,2));
+    }
 
 }
